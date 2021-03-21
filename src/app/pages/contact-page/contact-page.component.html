@@ -1,0 +1,5 @@
+<section class="contact-page main-layout page-pad">
+    <contact-filter (filterTxt)="onFilter($event)"></contact-filter>
+    <contact-list [contacts]="contacts"></contact-list>
+    <img src='../../../assets/imgs/plus.png' (click)="router.navigateByUrl('/contact/edit')" />
+</section>

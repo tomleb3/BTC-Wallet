@@ -1,0 +1,22 @@
+<section class="home main-layout page-pad">
+    <h2 class="txt-center">BTC Wallet</h2>
+
+    <h3>Hello {{user.name.split(' ').slice(0, -1)}} !</h3>
+    <article class="flex col j-between">
+        <div>
+            <small class="d-block muted-txt">Current Balance</small>
+            <div class="flex a-center">
+                <img src="../../../assets/imgs/coins.png" />
+                <p>BIT: <span class="clr1">₿ {{user.coins}}</span></p>
+            </div>
+            <div class="flex a-center">
+                <img src="../../../assets/imgs/bitcoin.png" />
+                <p>USD: {{coinsInUsd}}</p>
+            </div>
+        </div>
+        <div>
+            <small class="d-block muted-txt">Current Bit Rate USD</small>
+            <strong>$ {{bitRateInUsd}}</strong>
+        </div>
+    </article>
+</section>

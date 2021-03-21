@@ -1,0 +1,21 @@
+<article class="contact-preview">
+    <a class="flex a-center" [routerLink]="['/contact', contact._id]">
+        <ngx-skeleton-loader *ngIf="!imgLoaded" class="skeleton-container" animation="pulse" appearance="circle">
+        </ngx-skeleton-loader>
+        <img #userImg (load)="onImgLoad()" src='https://robohash.org/set_set5/{{contact.name}}?size=100x100' alt="" />
+        <div>
+            <div>
+                <span class="material-icons">contacts</span>
+                <p>{{contact.name}}</p>
+            </div>
+            <div class="d-none">
+                <span class="material-icons">phone_android</span>
+                <p>{{contact.phone}}</p>
+            </div>
+            <div class="d-none">
+                <span class="material-icons">alternate_email</span>
+                <p>{{contact.email}}</p>
+            </div>
+        </div>
+    </a>
+</article>

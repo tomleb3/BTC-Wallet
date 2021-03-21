@@ -1,0 +1,34 @@
+<section class="contact-details main-layout page-pad">
+    <div class="flex j-between a-center">
+        <img class="pointer" src="../../../assets/imgs/back.png" (click)="router.navigateByUrl('/contact')" />
+        <img class="pointer" src="../../../assets/imgs/edit.png"
+            (click)="router.navigate(['/contact/edit', contact._id])" />
+    </div>
+    <article>
+        <ngx-skeleton-loader *ngIf="!imgLoaded" animation="pulse" style="height: inherit"
+            [theme]="{margin: 0, height: 'inherit', width: '100px'}">
+        </ngx-skeleton-loader>
+        <img class="user-img" #userImg (load)="onImgLoad()"
+            src="https://robohash.org/set_set5/{{contact.name}}?size=100x100">
+    </article>
+    <div>
+        <p>Name</p>
+        <span>{{contact.name}}</span>
+    </div>
+    <div>
+        <p>Phone</p>
+        <span>{{contact.phone}}</span>
+    </div>
+    <div>
+        <p>Email</p>
+        <span>{{contact.email}}</span>
+    </div>
+
+    <div>
+        <p>Transfer Funds</p>
+        <div class="flex a-center">
+            <input type="number" />
+            <span class="material-icons pointer">send</span>
+        </div>
+    </div>
+</section>
